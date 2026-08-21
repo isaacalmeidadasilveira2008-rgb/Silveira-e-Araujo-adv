@@ -1,0 +1,376 @@
+:root {
+  --branco: #FFFFFF;
+  --preto: #000000;
+  --cinza-texto: #4D4D4D;
+  --cinza-texto-claro: rgba(255, 255, 255, 0.72);
+  --cinza-borda: #E0E0E0;
+  --cinza-fundo-alt: #F2F2F2;
+  --cinza-hover: #2B2B2B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--branco);
+  color: var(--preto);
+  font-family: 'Work Sans', sans-serif;
+}
+
+section {
+  scroll-margin-top: 1.5rem;
+}
+
+h1, h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--preto);
+}
+
+/* ===== Header ===== */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 8%;
+  border-bottom: 1px solid var(--cinza-borda);
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  color: var(--preto);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+  opacity: 0.55;
+}
+
+/* ===== Botões ===== */
+.botao {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.botao-nav {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--preto);
+  color: var(--preto);
+  background: transparent;
+}
+
+.botao-nav:hover {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.botao-principal {
+  background-color: var(--preto);
+  color: var(--branco);
+}
+
+.botao-principal:hover {
+  background-color: var(--cinza-hover);
+}
+
+.botao-claro {
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.botao-claro:hover {
+  background-color: var(--cinza-fundo-alt);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--preto);
+  outline-offset: 3px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  margin: 0 8%;
+  padding: 4.5rem 0;
+  flex-wrap: wrap;
+}
+
+.hero-texto {
+  max-width: 560px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cinza-texto);
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow-centro {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.destaque {
+  color: var(--preto);
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1.5px;
+}
+
+.hero-texto p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--cinza-texto);
+  margin-bottom: 2rem;
+}
+
+.destaques {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+}
+
+.destaques li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.destaques-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border: 1px solid var(--preto);
+  border-radius: 50%;
+  font-family: 'Fraunces', serif;
+  font-size: 0.75rem;
+  color: var(--preto);
+}
+
+.moldura {
+  border: 1px solid var(--cinza-borda);
+  padding: 0.6rem;
+  background-color: var(--branco);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.imagem {
+  display: block;
+  max-width: 700px;
+  width: 150%;
+  height: auto;
+}
+
+/* ===== Sobre ===== */
+.sobre {
+  background-color: var(--cinza-fundo-alt);
+  padding: 5rem 8%;
+  text-align: center;
+}
+
+.sobre-texto {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--preto);
+}
+
+/* ===== Áreas de atuação ===== */
+.areas {
+  padding: 5rem 8%;
+  text-align: center;
+}
+
+.areas-titulo {
+  font-size: 2rem;
+  margin: 0.75rem 0 3rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 220px;
+  max-width: 260px;
+  background: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  padding: 2rem 1.5rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: var(--preto);
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--cinza-texto);
+}
+
+/* ===== CTA final ===== */
+.cta-final {
+  background-color: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  padding: 5rem 8%;
+}
+
+.cta-final h2 {
+  color: var(--branco);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta-final p {
+  color: var(--cinza-texto-claro);
+  margin-bottom: 2rem;
+}
+
+/* ===== Footer ===== */
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 8%;
+  background-color: var(--preto);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  color: var(--cinza-texto-claro);
+}
+
+.rodape-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.rodape a {
+  color: var(--cinza-texto-claro);
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  color: var(--branco);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .logo-img {
+    height: 34px;
+  }
+
+  .rodape-logo {
+    height: 38px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .hero-texto {
+    max-width: 100%;
+  }
+
+  .destaques li {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cabecalho,
+  .rodape {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
