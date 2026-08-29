@@ -374,3 +374,27 @@ h1 {
     max-width: 100%;
   }
 }
+/* Limita a altura da foto no celular, pra não dominar a tela */
+@media (max-width: 768px) {
+  .imagem {
+    max-height: 320px;
+    object-fit: cover;
+  }
+}
+
+/* Ajustes finos pra telas bem pequenas (iPhone SE e parecidos) */
+@media (max-width: 480px) {
+  .hero-texto p,
+  .sobre-texto {
+    font-size: 0.95rem;
+  }
+
+  .areas-titulo,
+  .cta-final h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.5rem 1.2rem;
+  }
+}
